@@ -4,6 +4,26 @@ Retail Store Sales Insights and Prediction Model
 
 A local retail analysis workspace for cleaning data, training a sales model, chatting with the model, and exploring results in a browser dashboard.
 
+## One Paste To Run Everything
+
+If you just want to run the full setup and see the project working, do this first:
+
+```bat
+START_APP.bat
+```
+
+Keep internet on while it runs.
+
+What happens behind the scenes:
+
+1. If Conda/Anaconda is not available, the launcher installs Miniconda automatically.
+2. It creates the project virtual environment.
+3. It installs the required Python packages from `requirements.txt`.
+4. It starts the dashboard.
+5. From there, the auto-scraping / auto-analysis flow can run from the dashboard or notebook workflow.
+
+If you prefer the notebook path for auto scraping and model build, open `retail_auto_scrape_clean_model.ipynb` after the launcher finishes and run the cells in order.
+
 ## Quick Start
 
 ### 1. Clone the repo
@@ -21,7 +41,7 @@ START_APP.bat
 
 This will:
 
-- install Miniconda if Conda is missing
+- install Miniconda if Conda/Anaconda is missing
 - create a dedicated project environment
 - install the Python dependencies from `requirements.txt`
 - start the dashboard
@@ -110,6 +130,8 @@ After a run, look in `outputs/` for:
 - `phase1_report.md`
 - `plots/`
 - `models/`
+
+Note: `outputs/` is ignored by git, but you do not need to create it by hand. The scripts and dashboard create it automatically when you run the project.
 
 ## Notes
 
